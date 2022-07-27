@@ -1,0 +1,158 @@
+<header *ngIf="showHeader==1">
+    <div class="navbar shadow-sm">
+        <div class="container">
+            <div class="navbar-brand align-item-center d-flex">
+                <div>
+                    <img routerLink="/products" class="logo" src="data:image/jpeg;base64,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" alt="">
+                </div>
+                <strong class="header-title">Online Organic Store</strong>
+            </div>
+            <div *ngIf="login==0" class="text-right">
+                <button class="btn btnMain" type="button" data-toggle="modal" data-target="#loginModal" id="custLogin">User Login</button>
+                <button class="btn btnMain" type="button" data-toggle="modal" data-target="#registerModal" id="custRegister">Register</button>
+            </div>
+            <div *ngIf="login==1" class="text-right">
+                <button class="btn btnMain" (click)="getActiveOrders()" type="button" data-toggle="modal" data-target="#activeOrders">Previous Orders</button>
+                <button class="btn btnMain" (click)="CustomerLogout()">Logout</button>
+            </div>
+        </div>
+
+        <button *ngIf="login==1" routerLink="cart" class="btn cart">
+            <i style="font-size: 50px;color:#d80fd8;" class="fas fa-cart-plus"></i>
+        </button>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="close" id="Lcancel" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+                <p *ngIf="message!= ''">{{message}}</p>
+                <form (ngSubmit)="loginSubmit()">
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-3">
+                            <i class="fas fa-envelope prefix grey-text"></i>
+                            <input [(ngModel)]="loginData.email" name="email" type="email" id="defaultForm-email"
+                                class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                        </div>
+
+                        <div class="md-form mb-3">
+                            <i class="fas fa-lock prefix grey-text"></i>
+                            <input [(ngModel)]="loginData.password" name="password" type="password"
+                                id="defaultForm-pass" class="form-control validate">
+                            <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="submit" id="loginSubmit" class="btn btn-default">Login</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+                    <p *ngIf="message!= ''">{{message}}</p>
+                    <button type="button" class="close" id="Rcancel" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <form [formGroup]="formValue">
+                    <div class="modal-body mx-3">
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-envelope prefix grey-text"> Email Id</i>
+                            <input type="email" formControlName="email" id="orangeForm-Remail"
+                                class="form-control validate">
+
+                        </div>
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-lock prefix grey-text"> Password</i>
+                            <input type="password" formControlName="password" id="orangeForm-Rpass"
+                                class="form-control validate">
+
+                        </div>
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-user prefix grey-text"> Full Name</i>
+                            <input type="text" formControlName="name" id="orangeForm-name"
+                                class="form-control validate">
+
+                        </div>
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-user prefix grey-text"> Contact Number</i>
+                            <input type="text" formControlName="contact" id="orangeForm-contact"
+                                class="form-control validate">
+                        </div>
+                        <div class="md-form form-group mb-2">
+                            <i class="fas fa-user prefix grey-text"> Address</i>
+                            <input type="text" formControlName="address" id="orangeForm-address"
+                                class="form-control validate">
+
+                        </div>
+                    </div>
+                </form>
+                <div class="modal-footer d-flex justify-content-center">
+                    <button class="btn btn-deep-orange" (click)=addCustomer()>Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="activeOrders">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Previous Orders</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div *ngIf="activeOrders.length!=0">
+                        <table class="table">
+                            <thead class="thead-#bf1e2e">
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                    <th>Cost</th>
+                                    <th>Purchase Data</th>
+                                    <th>Transaction Id</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let pur of activeOrders">
+                                    <td>{{pur.productname}}</td>
+                                    <td>{{pur.quantity}}</td>
+                                    <td>{{pur.totalcost}}</td>
+                                    <td>{{pur.dop}}</td>
+                                    <td>{{pur.transactionid}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div *ngIf="activeOrders.length==0">
+                        <h5 class="text-center text-danger">No Previous orders</h5>
+                    </div>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-danger" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
